@@ -97,4 +97,4 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Par
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" -Name "SMB3.1.1" -Value 1 -Type DWord
 
 Write-Host "Older versions of SMB protcol have been disabled and SMBv3.1.1 has been enabled successfully."
-Write-Host "All tasks complete"
+Write-Host "All tasks complete. Please reboot."
