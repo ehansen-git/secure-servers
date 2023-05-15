@@ -1,4 +1,4 @@
-write-Host "This script is used to make your server PCI 4.0 compliant. 
+Write-Host "This script is used to make your server PCI 4.0 compliant. 
 It will disable TLS 1.0 and 1.1 which may break client connections to your website. 
 SMB will also be locked down to verison 3.1.1 which may not work on systems older than Server 2016.
 
