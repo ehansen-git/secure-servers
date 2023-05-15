@@ -1,3 +1,11 @@
+write-Host "This script is used to make your server PCI 4.0 compliant. 
+It will disable TLS 1.0 and 1.1 which may break client connections to your website. 
+SMB will also be locked down to verison 3.1.1 which may not work on systems older than Server 2016.
+
+Continue?....."
+
+Pause
+
 # Disable Multi-Protocol Unified Hello (MPUH)
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\Multi-Protocol Unified Hello" -Name "Enabled" -Value 0 -Force
 
@@ -89,3 +97,4 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Par
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" -Name "SMB3.1.1" -Value 1 -Type DWord
 
 Write-Host "Older versions of SMB protcol have been disabled and SMBv3.1.1 has been enabled successfully."
+Write-Host "All tasks complete"
